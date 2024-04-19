@@ -1,0 +1,10 @@
+
+  #login-form form {
+    padding: 50px 30px;
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #login-form input {
+    margin-bottom: 12px;
+  }
+  
