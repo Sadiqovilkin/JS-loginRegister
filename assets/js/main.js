@@ -19,6 +19,11 @@ window.addEventListener("load", () => {
   getAll(endpoints.movies).then((res) => {
     renderCards(res.data);
   });
+  getAll(endpoints.users).then((res) => {
+    if (res.data.every((x) => x.isLogged === false)) {
+      window.location.replace("register.html");
+    }
+  });
 });
 
 function renderCards(arr) {

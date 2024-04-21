@@ -58,39 +58,12 @@
   ],
   "users": [
     {
-      "id": "cbb2d89d-4ec2-466a-b7b1-6e2b7ade68aa",
+      "id": "ac2f04e0-a216-4d97-acb2-412dc5174074",
       "username": "ilkin",
-      "email": "",
-      "password": "Ilkin1234",
-      "isLogged": false
-    },
-    {
-      "id": "592e8b79-74a6-496b-89c6-2ea6c8ac8911",
-      "username": "",
-      "email": "",
-      "password": "",
-      "isLogged": false
-    },
-    {
-      "id": "35c4ed0d-cf76-4c51-98ec-269a63d3181b",
-      "username": "ilkin",
-      "email": "",
-      "password": "Ilkin1234",
-      "isLogged": false
-    },
-    {
-      "id": "d0ad2161-ce46-4cfa-9b06-2ef9f86a7e90",
-      "username": "ilkin",
-      "email": "ilkin@gmail.com",
-      "password": "Ilkin1234",
-      "isLogged": false
-    },
-    {
-      "id": "aaa85862-3df5-4847-b33f-c55f5bf9c909",
-      "username": "ilkin860",
-      "email": "ilkin860@gmail.com",
-      "password": "Ilkin1234",
-      "isLogged": false
+      "email": "i@gmail.com",
+      "password": "i1234",
+      "isLogged": true,
+      "whistlist": []
     }
   ]
 }

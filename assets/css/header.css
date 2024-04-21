@@ -31,9 +31,11 @@ header {
 .links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .links li {
   margin-right: 14px;
+  color: #fff;
 }
 ul {
   margin-bottom: 0;
