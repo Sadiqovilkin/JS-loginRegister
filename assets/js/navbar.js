@@ -11,6 +11,7 @@ getAll(endpoints.users).then((result) => {
             console.log(currentUser);
             linkUL.innerHTML = `  
                 <li><a href="index.html">Home</a></li>
+                <li><a href="add.html">Add</a></li>
                 <li><b>${currentUser.username}</b></li>
                 <li><button class="btn btn-outline-primary logout">logout</button></li>`;
             const logOut = document.querySelector(".logout");

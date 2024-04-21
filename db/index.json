@@ -32,6 +32,17 @@
       "trailerURL": "https://www.youtube.com/watch?v=CwXOrWvPBPk&ab_channel=RottenTomatoesClassicTrailers",
       "description": "In a bid to get his land back, Shrek agrees to retrieve Princess Fiona for the fairytale-hating Lord Farquaad of Duloc, but falls in love with her on the way. UPDATED",
       "id": "3"
+    },
+    {
+      "title": " Shrek 3",
+      "genre": "animation",
+      "country": "Azerbaijan",
+      "director": "Andrew Adam",
+      "ageRestriction": "6",
+      "poster": "https://i.ebayimg.com/images/g/eqkAAOSwY3tbOvT5/s-l1600.jpg",
+      "trailerURL": "https://www.youtube.com/watch?v=CwXOrWvPBPk&ab_channel=RottenTomatoesClassicTrailers",
+      "description": "In a bid to get his land back, Shrek agrees to retrieve Princess Fiona for the fairytale-hating Lord Farquaad of Duloc, but falls in love with her on the way",
+      "id": "ce82"
     }
   ],
   "genres": [
