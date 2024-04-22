@@ -1,5 +1,5 @@
 
-import { getAll, deleteOne, getOne, update } from "./API/requests/index.js";
+import { getAll, deleteOne, getOne, update, post, patch } from "./API/requests/index.js";
 import { endpoints } from "./API/constants.js";
 
 const moviesWrapper = document.querySelector(".movies-wrapper");
@@ -62,9 +62,8 @@ function renderCards(arr) {
                 <a href="detail.html?id=${movie.id}" class="btn btn-outline-info info-btn">
                     <i class="fa-solid fa-circle-info"></i>
                 </a>
-                ${
-                  user.isAdmin ? "" : `
-                  <button class="btn btn-outline-primary whistlist"  data-bs-toggle="modal" data-bs-target="#editModal">
+                ${user.isAdmin ? "" : `
+                  <button class="btn btn-outline-primary whistlist" data-id ="${movie.id}" >
                 <i class="fa-regular fa-heart"></i>  
                 </button>
                   `
@@ -83,13 +82,41 @@ function renderCards(arr) {
     </div>`;
 
     // whistlist
-    const heartBtns = querySelectorAll(".whistlist")
+    const heartBtns =document.querySelectorAll(".whistlist")
+
     heartBtns.forEach(heartbtn => {
-      heartbtn.addEventListener("click",function () {
-        if (this.children[0].className === "fa-regular fa-heart") {
-          this.children[0].className === "fa-solid fa-heart"
-          
+      user.whistlist.forEach(el=>{
+        if (el.movieId == heartbtn.getAttribute("data-id")) {
+          heartbtn.children[0].classList.replace("fa-regular","fa-solid")
         }
+      })
+      heartbtn.addEventListener("click",function () {
+      console.log(this.children[0].className);
+
+      this.children[0].classList.toggle("fa-regular") 
+      this.children[0].classList.toggle("fa-solid") 
+       console.log( heartbtn.getAttribute("data-id"))
+      //  console.log(user.whistlist);
+      let w= user.whistlist.find(w=>w.movieId == heartbtn.getAttribute("data-id"))
+       if(w){
+        console.log("exist");
+        let idx = user.whistlist.findIndex(w=>w.movieId == heartbtn.getAttribute("data-id"))
+        user.whistlist.splice(idx , 1)
+        console.log(user.whistlist);
+      }
+      else{
+         user.whistlist.push({
+           userId :user.id,
+           movieId : heartbtn.getAttribute("data-id"),
+         })
+        console.log("not exist");
+       }
+        
+       patch(endpoints.users , user.id , {
+        whistlist: user.whistlist
+       } )
+      //  console.log(user);
+      //  post(endpoints.users , user)
       })
     });
 

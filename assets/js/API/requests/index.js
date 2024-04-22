@@ -57,3 +57,7 @@ export async function update(endpoint, id, payload) {
   const response = await axios.put(API_BASE_URL + endpoint + `/${id}`, payload);
   return response;
 }
+export async function patch(endpoint, id, payload) {
+  const response = await axios.patch(API_BASE_URL + endpoint + `/${id}`, payload);
+  return response;
+}

@@ -97,7 +97,20 @@
       "password": "Ilkin123",
       "isLogged": true,
       "isAdmin": false,
-      "whistlist": []
+      "whistlist": [
+        {
+          "userId": "2f4c048d-9155-4938-a681-93cff7d57476",
+          "movieId": "3"
+        },
+        {
+          "userId": "2f4c048d-9155-4938-a681-93cff7d57476",
+          "movieId": "1"
+        },
+        {
+          "userId": "2f4c048d-9155-4938-a681-93cff7d57476",
+          "movieId": "ce82"
+        }
+      ]
     }
   ]
 }
