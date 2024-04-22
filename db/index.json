@@ -69,11 +69,23 @@
   ],
   "users": [
     {
-      "id": "ac2f04e0-a216-4d97-acb2-412dc5174074",
-      "username": "ilkin",
-      "email": "i@gmail.com",
-      "password": "i1234",
+      "id": "97416349-d3d6-4d81-bf45-36bfdd2c8f7d",
+      "username": "admin",
+      "fullname": "IlkinSadiqov",
+      "email": "ilkin@gmail.com",
+      "password": "Ilkin1234",
       "isLogged": true,
+      "isAdmin": true,
+      "whistlist": []
+    },
+    {
+      "id": "2f4c048d-9155-4938-a681-93cff7d57476",
+      "username": "ilkin",
+      "fullname": "Sadiqov Ilkin",
+      "email": "i@gmail.com",
+      "password": "Ilkin123",
+      "isLogged": false,
+      "isAdmin": false,
       "whistlist": []
     }
   ]

@@ -45,9 +45,19 @@
                 <div class="col-lg-8 ">
                     <form>
                         <input id="user-name" name="userName" class="form-control mb-2" type="text" placeholder="enter user name">
+                        <span class="d-none text-danger "></span>
                         <input id="user-email" name="userEmail" class="form-control mb-2" type="email" placeholder="enter user email">
+                        <span class="d-none text-danger "></span>
+                        <input id="full-name" name="fullName" class="form-control mb-2" type="text" placeholder="enter fullname">
+                        <span class="d-none text-danger "></span>
                         <input id="user-password" name="userPassword" class="form-control mb-2" type="password" placeholder="enter user password">
+                        <span class="d-none text-danger "></span>
                         <input id="user-confirm-password" name="userConfirmPass" class="form-control mb-2" type="password" placeholder="confirm password">
+                        <span class="d-none text-danger "></span>
+                        <div class="d-flex gap-2 ">
+                            <input id="isAdmin" type="checkbox"> 
+                            <label for="isAdmin">Is Admin?</label>
+                        </div>
                         <button id="registerBtn" class="btn btn-warning d-block mx-auto" type="submit">Sign Up</button>
                     </form>
                 </div>
