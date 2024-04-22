@@ -115,8 +115,6 @@ function renderCards(arr) {
        patch(endpoints.users , user.id , {
         whistlist: user.whistlist
        } )
-      //  console.log(user);
-      //  post(endpoints.users , user)
       })
     });
 

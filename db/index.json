@@ -43,17 +43,6 @@
       "trailerURL": "https://www.youtube.com/watch?v=CwXOrWvPBPk&ab_channel=RottenTomatoesClassicTrailers",
       "description": "In a bid to get his land back, Shrek agrees to retrieve Princess Fiona for the fairytale-hating Lord Farquaad of Duloc, but falls in love with her on the way",
       "id": "ce82"
-    },
-    {
-      "title": "kungfupanda4",
-      "genre": "animation",
-      "country": "USA",
-      "director": "undefined",
-      "ageRestriction": "4",
-      "poster": "https://plcw.tmsimg.com/assets/p25399831_v_v12_aa.jpg",
-      "trailerURL": "undefined",
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": "lSueAzO"
     }
   ],
   "genres": [
@@ -85,7 +74,7 @@
       "fullname": "IlkinSadiqov",
       "email": "ilkin@gmail.com",
       "password": "Ilkin1234",
-      "isLogged": false,
+      "isLogged": true,
       "isAdmin": true,
       "whistlist": []
     },
@@ -95,7 +84,7 @@
       "fullname": "Sadiqov Ilkin",
       "email": "i@gmail.com",
       "password": "Ilkin123",
-      "isLogged": true,
+      "isLogged": false,
       "isAdmin": false,
       "whistlist": [
         {
