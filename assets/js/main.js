@@ -24,12 +24,21 @@ window.addEventListener("load", () => {
       window.location.replace("register.html");
     }
   });
-});
 
+});
+let user;
+getAll(endpoints.users).then((result) => {
+      if (result.data.some((x) => x.isLogged)) {
+        user = result.data.find((x) => x.isLogged);
+        console.log(user);
+      }
+    }
+  
+)
 function renderCards(arr) {
   moviesWrapper.innerHTML = "";
   arr.forEach((movie) => {
-    moviesWrapper.innerHTML += `  <div class="col-lg-3 col-md-6 col-sm-12" data-id=${movie.id} data-editing="false">
+    moviesWrapper.innerHTML += `  <div class="col-lg-3 col-md-6 col-sm-12 g-4 " data-id=${movie.id} data-editing="false">
         <div class="card">
             <div class="card-img">
                 <img class="card-img-top"
@@ -53,17 +62,40 @@ function renderCards(arr) {
                 <a href="detail.html?id=${movie.id}" class="btn btn-outline-info info-btn">
                     <i class="fa-solid fa-circle-info"></i>
                 </a>
-                <button class="btn btn-outline-primary edit-btn"  data-bs-toggle="modal" data-bs-target="#editModal">
-                    <i class="fa-solid fa-pen-to-square"></i>
+                ${
+                  user.isAdmin ? "" : `
+                  <button class="btn btn-outline-primary whistlist"  data-bs-toggle="modal" data-bs-target="#editModal">
+                <i class="fa-regular fa-heart"></i>  
                 </button>
-                <button class="btn btn-outline-danger delete-btn">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
+                  `
+                }
+                
+                ${
+                  user.isAdmin ? `<button class=" btn btn-outline-primary edit-btn"  data-bs-toggle="modal" data-bs-target="#editModal">
+                  <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="btn btn-outline-danger delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+              </button>` : ''
+                }
             </div>
         </div>
     </div>`;
+
+    // whistlist
+    const heartBtns = querySelectorAll(".whistlist")
+    heartBtns.forEach(heartbtn => {
+      heartbtn.addEventListener("click",function () {
+        if (this.children[0].className === "fa-regular fa-heart") {
+          this.children[0].className === "fa-solid fa-heart"
+          
+        }
+      })
+    });
+
     //delete buttons
     const deleteBtns = document.querySelectorAll(".delete-btn");
+
     deleteBtns.forEach((btn) => {
       btn.addEventListener("click", async function () {
         const id = this.closest(".col-lg-3").getAttribute("data-id");

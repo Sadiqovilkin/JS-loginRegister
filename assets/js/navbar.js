@@ -8,10 +8,10 @@ getAll(endpoints.users).then((result) => {
     function renderNavbar(params) {
         if (result.data.some((x) => x.isLogged)) {
             let currentUser = result.data.find((x) => x.isLogged);
-            console.log(currentUser);
+            // console.log(currentUser);
             linkUL.innerHTML = `  
                 <li><a href="index.html">Home</a></li>
-                <li><a href="add.html">Add</a></li>
+                <li class='${currentUser.isAdmin ?" d-block" : "d-none"  }' ><a href="add.html">Add</a></li>
                 <li><b>${currentUser.username}</b></li>
                 <li><button class="btn btn-outline-primary logout">logout</button></li>`;
             const logOut = document.querySelector(".logout");

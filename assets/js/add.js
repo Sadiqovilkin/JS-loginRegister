@@ -1,4 +1,4 @@
-
+// import { Movie } from "./class.js";
 import { post } from "./API/requests/index.js";
 import { endpoints } from "./API/constants.js";
 // Inputss
@@ -15,21 +15,35 @@ const addBtn = document.getElementById('addBtn')
 
 
 
+class Movie {
 
+    constructor(title,poster,trailerUrl,genre,minAge,country,directory,description){
+      this.title = title;
+      this.poster = poster;
+      this.genre = genre;
+      this.minAge = minAge;
+      this.country = country;
+      this.directory = directory;
+      this.description = description; 
+      this.trailerUrl = "https://www.youtube.com/embed" + trailerUrl.substring(16)
+  
+    }
+  }
 
 addBtn.addEventListener('click', (e) => {
     e.preventDefault()
 // Esas bradi    TAMAM
-post(endpoints.movies,{
-            "title": title.value,
-            "poster": poster.value,
-            "trailerURL": trailerURL.value,
-            "genre": genre.value,
-            "description": description.value,
-            "minAge": minAge.value,
-            "country": country.value,
-            "director": director.value,
-        })
+
+post(endpoints.movies,new Movie(
+    title.value, 
+    poster.value,
+    trailerURL.value,
+    genre.value,
+    Number( minAge.value),
+    country.value,
+    director.value,
+    description.value,
+))
         Swal.fire({
             position: "center",
             icon: "success",
